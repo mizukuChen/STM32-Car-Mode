@@ -1,0 +1,539 @@
+{
+  "name": "2021F",
+  "type": "ARM",
+  "dependenceList": [],
+  "srcDirs": [],
+  "virtualFolder": {
+    "name": "<virtual_root>",
+    "files": [],
+    "folders": [
+      {
+        "name": "Application",
+        "files": [],
+        "folders": [
+          {
+            "name": "MDK-ARM",
+            "files": [
+              {
+                "path": "startup_stm32h743xx.s"
+              }
+            ],
+            "folders": []
+          },
+          {
+            "name": "User",
+            "files": [],
+            "folders": [
+              {
+                "name": "Core",
+                "files": [
+                  {
+                    "path": "../Core/Src/main.c"
+                  },
+                  {
+                    "path": "../Core/Src/gpio.c"
+                  },
+                  {
+                    "path": "../Core/Src/i2c.c"
+                  },
+                  {
+                    "path": "../Core/Src/tim.c"
+                  },
+                  {
+                    "path": "../Core/Src/usart.c"
+                  },
+                  {
+                    "path": "../Core/Src/stm32h7xx_it.c"
+                  },
+                  {
+                    "path": "../Core/Src/config.c"
+                  },
+                  {
+                    "path": "../Core/Src/further_task.c"
+                  },
+                  {
+                    "path": "../Core/Src/further_task_A.c"
+                  },
+                  {
+                    "path": "../Core/Src/further_task_B.c"
+                  },
+                  {
+                    "path": "../Core/Src/microtask.c"
+                  },
+                  {
+                    "path": "../Core/Src/mode.c"
+                  },
+                  {
+                    "path": "../Core/Src/mpu6050.c"
+                  },
+                  {
+                    "path": "../Core/Src/mytask.c"
+                  },
+                  {
+                    "path": "../Core/Src/new_task.c"
+                  },
+                  {
+                    "path": "../Core/Src/pid.c"
+                  },
+                  {
+                    "path": "../Core/Src/superUI.c"
+                  },
+                  {
+                    "path": "../Core/Src/Trace.c"
+                  },
+                  {
+                    "path": "../Core/Src/UI.c"
+                  }
+                ],
+                "folders": []
+              },
+              {
+                "name": "Mode",
+                "files": [
+                  {
+                    "path": "../Mode/Src/Mode_encoder.c"
+                  },
+                  {
+                    "path": "../Mode/Src/Mode_motion.c"
+                  },
+                  {
+                    "path": "../Mode/Src/Mode_reverse.c"
+                  },
+                  {
+                    "path": "../Mode/Src/Mode_straight.c"
+                  },
+                  {
+                    "path": "../Mode/Src/Mode_trace.c"
+                  },
+                  {
+                    "path": "../Mode/Src/Mode_turn.c"
+                  },
+                  {
+                    "path": "../Mode/Src/Mode_path.c"
+                  },
+                  {
+                    "path": "../Mode/Src/Mode_path_serial.c"
+                  }
+                ],
+                "folders": []
+              },
+              {
+                "name": "Inc",
+                "files": [],
+                "folders": [
+                  {
+                    "name": "Core_Inc",
+                    "files": [
+                      {
+                        "path": "../Core/Inc/gpio.h"
+                      },
+                      {
+                        "path": "../Core/Inc/i2c.h"
+                      },
+                      {
+                        "path": "../Core/Inc/main.h"
+                      },
+                      {
+                        "path": "../Core/Inc/pid.h"
+                      },
+                      {
+                        "path": "../Core/Inc/stm32h7xx_hal_conf.h"
+                      },
+                      {
+                        "path": "../Core/Inc/stm32h7xx_it.h"
+                      },
+                      {
+                        "path": "../Core/Inc/tim.h"
+                      },
+                      {
+                        "path": "../Core/Inc/UI.h"
+                      },
+                      {
+                        "path": "../Core/Inc/usart.h"
+                      }
+                    ],
+                    "folders": []
+                  },
+                  {
+                    "name": "Mode_Inc",
+                    "files": [
+                      {
+                        "path": "../Mode/Inc/Mode_encoder.h"
+                      },
+                      {
+                        "path": "../Mode/Inc/Mode_motion.h"
+                      },
+                      {
+                        "path": "../Mode/Inc/Mode_path.h"
+                      },
+                      {
+                        "path": "../Mode/Inc/Mode_path_serial.h"
+                      },
+                      {
+                        "path": "../Mode/Inc/Mode_reverse.h"
+                      },
+                      {
+                        "path": "../Mode/Inc/Mode_straight.h"
+                      },
+                      {
+                        "path": "../Mode/Inc/Mode_trace.h"
+                      },
+                      {
+                        "path": "../Mode/Inc/Mode_turn.h"
+                      }
+                    ],
+                    "folders": []
+                  },
+                  {
+                    "name": "Task_Inc",
+                    "files": [
+                      {
+                        "path": "../Task/Inc/mytask.h"
+                      },
+                      {
+                        "path": "../Task/Inc/task.h"
+                      }
+                    ],
+                    "folders": []
+                  },
+                  {
+                    "name": "Hardware_Inc",
+                    "files": [
+                      {
+                        "path": "../Hardware/Inc/filter.h"
+                      },
+                      {
+                        "path": "../Hardware/Inc/gw_grayscale_sensor.h"
+                      },
+                      {
+                        "path": "../Hardware/Inc/GWKJ.h"
+                      },
+                      {
+                        "path": "../Hardware/Inc/HMC5883.h"
+                      },
+                      {
+                        "path": "../Hardware/Inc/jy61p.h"
+                      },
+                      {
+                        "path": "../Hardware/Inc/mpu6050.h"
+                      },
+                      {
+                        "path": "../Hardware/Inc/oled.h"
+                      },
+                      {
+                        "path": "../Hardware/Inc/oledfont.h"
+                      },
+                      {
+                        "path": "../Hardware/Inc/TB6612.h"
+                      }
+                    ],
+                    "folders": []
+                  }
+                ]
+              },
+              {
+                "name": "Hardware",
+                "files": [
+                  {
+                    "path": "../Hardware/Src/filter.c"
+                  },
+                  {
+                    "path": "../Hardware/Src/GWKJ.c"
+                  },
+                  {
+                    "path": "../Hardware/Src/HMC5883.c"
+                  },
+                  {
+                    "path": "../Hardware/Src/jy61p.c"
+                  },
+                  {
+                    "path": "../Hardware/Src/oled.c"
+                  },
+                  {
+                    "path": "../Hardware/Src/TB6612.c"
+                  }
+                ],
+                "folders": []
+              },
+              {
+                "name": "Task",
+                "files": [
+                  {
+                    "path": "../Task/Src/further_task.c"
+                  },
+                  {
+                    "path": "../Task/Src/further_task_A.c"
+                  },
+                  {
+                    "path": "../Task/Src/further_task_B.c"
+                  },
+                  {
+                    "path": "../Task/Src/microtask.c"
+                  },
+                  {
+                    "path": "../Task/Src/mytask.c"
+                  },
+                  {
+                    "path": "../Task/Src/new_task.c"
+                  },
+                  {
+                    "path": "../Task/Src/Trace.c"
+                  }
+                ],
+                "folders": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Drivers",
+        "files": [],
+        "folders": [
+          {
+            "name": "STM32H7xx_HAL_Driver",
+            "files": [
+              {
+                "path": "../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_cortex.c"
+              },
+              {
+                "path": "../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc.c"
+              },
+              {
+                "path": "../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc_ex.c"
+              },
+              {
+                "path": "../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash.c"
+              },
+              {
+                "path": "../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash_ex.c"
+              },
+              {
+                "path": "../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_gpio.c"
+              },
+              {
+                "path": "../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_hsem.c"
+              },
+              {
+                "path": "../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma.c"
+              },
+              {
+                "path": "../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma_ex.c"
+              },
+              {
+                "path": "../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_mdma.c"
+              },
+              {
+                "path": "../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr.c"
+              },
+              {
+                "path": "../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr_ex.c"
+              },
+              {
+                "path": "../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal.c"
+              },
+              {
+                "path": "../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c.c"
+              },
+              {
+                "path": "../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c_ex.c"
+              },
+              {
+                "path": "../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_exti.c"
+              },
+              {
+                "path": "../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim.c"
+              },
+              {
+                "path": "../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim_ex.c"
+              },
+              {
+                "path": "../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.c"
+              },
+              {
+                "path": "../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart_ex.c"
+              }
+            ],
+            "folders": []
+          },
+          {
+            "name": "CMSIS",
+            "files": [
+              {
+                "path": "../Core/Src/system_stm32h7xx.c"
+              }
+            ],
+            "folders": []
+          }
+        ]
+      }
+    ]
+  },
+  "outDir": "build",
+  "deviceName": null,
+  "packDir": null,
+  "miscInfo": {
+    "uid": "e0ac2b1bfb77b7274ecf92bc84d603f3"
+  },
+  "targets": {
+    "2021F": {
+      "excludeList": [
+        "<virtual_root>/Application/User/Core/config.c",
+        "<virtual_root>/Application/User/Core/further_task_A.c",
+        "<virtual_root>/Application/User/Core/further_task_B.c",
+        "<virtual_root>/Application/User/Core/further_task.c",
+        "<virtual_root>/Application/User/Core/go.c",
+        "<virtual_root>/Application/User/Core/microtask.c",
+        "<virtual_root>/Application/User/Core/mode.c",
+        "<virtual_root>/Application/User/Core/mytask.c",
+        "<virtual_root>/Application/User/Core/new_task.c",
+        "<virtual_root>/Application/User/Core/stm32h7xx_hal_msp.c",
+        "<virtual_root>/Application/User/Core/stm32h7xx_it.c",
+        "<virtual_root>/Application/User/Core/superUI.c",
+        "<virtual_root>/Application/User/Core/Trace.c",
+        "<virtual_root>/Application/User/Core/UI.c",
+        "<virtual_root>/Application/User/Core/filter.c"
+      ],
+      "toolchain": "AC6",
+      "compileConfig": {
+        "cpuType": "Cortex-M7",
+        "archExtensions": "",
+        "floatingPointHardware": "double",
+        "useCustomScatterFile": false,
+        "scatterFilePath": "<YOUR_SCATTER_FILE>.sct",
+        "storageLayout": {
+          "RAM": [
+            {
+              "tag": "IRAM",
+              "id": 1,
+              "mem": {
+                "startAddr": "0x20000000",
+                "size": "0x20000"
+              },
+              "isChecked": true,
+              "noInit": false
+            },
+            {
+              "tag": "IRAM",
+              "id": 2,
+              "mem": {
+                "startAddr": "0x24000000",
+                "size": "0x80000"
+              },
+              "isChecked": true,
+              "noInit": false
+            }
+          ],
+          "ROM": [
+            {
+              "tag": "IROM",
+              "id": 1,
+              "mem": {
+                "startAddr": "0x8000000",
+                "size": "0x200000"
+              },
+              "isChecked": true,
+              "isStartup": true
+            }
+          ]
+        },
+        "options": "null"
+      },
+      "uploader": "STLink",
+      "uploadConfig": {
+        "bin": "",
+        "proType": "SWD",
+        "resetMode": "default",
+        "runAfterProgram": true,
+        "speed": 4000,
+        "address": "0x8000000",
+        "elFile": "None",
+        "optionBytes": ".eide/2021f.st.option.bytes.ini",
+        "otherCmds": ""
+      },
+      "uploadConfigMap": {
+        "JLink": {
+          "bin": "",
+          "baseAddr": "",
+          "cpuInfo": {
+            "vendor": "null",
+            "cpuName": "null"
+          },
+          "proType": 1,
+          "speed": 8000,
+          "otherCmds": ""
+        }
+      },
+      "custom_dep": {
+        "name": "default",
+        "incList": [
+          "../Core/Inc",
+          "../Drivers/STM32H7xx_HAL_Driver/Inc",
+          "../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy",
+          "../Drivers/CMSIS/Device/ST/STM32H7xx/Include",
+          "../Drivers/CMSIS/Include",
+          ".cmsis/include",
+          "RTE/_2021F",
+          "../Mode/Inc",
+          "../Hardware/Inc",
+          "../Task/Inc"
+        ],
+        "libList": [],
+        "defineList": [
+          "USE_HAL_DRIVER",
+          "STM32H743xx"
+        ]
+      },
+      "builderOptions": {
+        "AC5": {
+          "version": 4,
+          "beforeBuildTasks": [],
+          "afterBuildTasks": [],
+          "global": {
+            "use-microLIB": false,
+            "output-debug-info": "enable"
+          },
+          "c/cpp-compiler": {
+            "optimization": "level-3",
+            "one-elf-section-per-function": true,
+            "c99-mode": true,
+            "C_FLAGS": "--diag_suppress=1 --diag_suppress=1295",
+            "CXX_FLAGS": "--diag_suppress=1 --diag_suppress=1295",
+            "warnings": "all-warnings",
+            "gnu-extensions": true
+          },
+          "asm-compiler": {},
+          "linker": {
+            "output-format": "elf",
+            "xo-base": "",
+            "ro-base": "",
+            "rw-base": ""
+          }
+        },
+        "AC6": {
+          "version": 3,
+          "beforeBuildTasks": [],
+          "afterBuildTasks": [],
+          "global": {
+            "use-microLIB": true,
+            "output-debug-info": "enable"
+          },
+          "c/cpp-compiler": {
+            "optimization": "level-0",
+            "language-c": "c99",
+            "language-cpp": "c++11",
+            "warnings": "no-warnings"
+          },
+          "asm-compiler": {
+            "$use": "asm-auto"
+          },
+          "linker": {
+            "output-format": "elf",
+            "misc-controls": "--diag_suppress=L6329"
+          }
+        }
+      }
+    }
+  },
+  "version": "3.6"
+}
