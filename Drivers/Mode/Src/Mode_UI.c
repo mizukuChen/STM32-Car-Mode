@@ -191,7 +191,7 @@ void further(void)
             OLED_ShowString(0, 10, "The task will start", 8, 1);
             OLED_ShowString(0, 20, "in 3 seconds.", 8, 1);
             OLED_Refresh();
-            HAL_Delay(3000);
+            //HAL_Delay(3000);
             OLED_Clear();
             OLED_ShowString(0, 10, "The task is running.", 8, 1);
             OLED_Refresh();
