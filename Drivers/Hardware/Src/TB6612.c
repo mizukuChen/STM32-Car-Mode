@@ -5,6 +5,10 @@ volatile int8_t encoder_flag;
 
 void Set_PWM(float PWMB_in, float PWMA_in) // 设置两轮速度
 {
+	PWMA_in = PWMA_in < 100 ? PWMA_in : 100;
+	PWMB_in = PWMB_in < 100 ? PWMB_in : 100;
+	PWMA_in = PWMA_in > -100 ? PWMA_in : -100;
+	PWMB_in = PWMB_in > -100 ? PWMB_in : -100;
 	int PWMA = PWMA_in * PWM_Period / 100;
 	int PWMB = PWMB_in * PWM_Period / 100;
 	/* ���A������ƣ�PC0/PC13�� */
