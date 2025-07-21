@@ -3,6 +3,8 @@
 
 #include <main.h>
 
-void go_straight(float angle, float speed);
+int GetTargetNum(void);
+int GetTurnFlag(void);
+char *GetTurnData();
 
 #endif
