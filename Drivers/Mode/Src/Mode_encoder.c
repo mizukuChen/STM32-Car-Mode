@@ -61,9 +61,7 @@ void update_coordinates()//更新坐标数值，第一次使用前需要进行�
 	right_encoder = __HAL_TIM_GET_COUNTER(&htim4);
 	//记录本次编码器的值
 
-	float alter_angle = (right_alter - left_alter) / CAR_LENGTH / 2;
-	//两轮中心位移的相对朝向
-	float orientation_angle = (Yaw + last_angle) / 2 + alter_angle;
+	float orientation_angle = (Yaw + last_angle) / 2;
 	//两轮中心位移的绝对朝向（以Yaw == 0为参考方向）
 
 	last_angle = Yaw;
