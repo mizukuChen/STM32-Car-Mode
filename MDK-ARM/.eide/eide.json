@@ -28,9 +28,6 @@
                 "name": "Core",
                 "files": [
                   {
-                    "path": "../Core/Src/main.c"
-                  },
-                  {
                     "path": "../Core/Src/gpio.c"
                   },
                   {
@@ -86,46 +83,46 @@
                     "name": "Mode_Inc",
                     "files": [
                       {
-                        "path": "../Mode/Inc/Mode_encoder.h"
+                        "path": "../Drivers/Mode/Inc/Mode.h"
                       },
                       {
-                        "path": "../Mode/Inc/Mode_motion.h"
+                        "path": "../Drivers/Mode/Inc/Mode_config.h"
                       },
                       {
-                        "path": "../Mode/Inc/Mode_path.h"
+                        "path": "../Drivers/Mode/Inc/Mode_encoder.h"
                       },
                       {
-                        "path": "../Mode/Inc/Mode_path_serial.h"
+                        "path": "../Drivers/Mode/Inc/Mode_K230.h"
                       },
                       {
-                        "path": "../Mode/Inc/Mode_reverse.h"
+                        "path": "../Drivers/Mode/Inc/Mode_motion.h"
                       },
                       {
-                        "path": "../Mode/Inc/Mode_straight.h"
+                        "path": "../Drivers/Mode/Inc/Mode_path.h"
                       },
                       {
-                        "path": "../Mode/Inc/Mode_trace.h"
+                        "path": "../Drivers/Mode/Inc/Mode_path_serial.h"
                       },
                       {
-                        "path": "../Mode/Inc/Mode_turn.h"
+                        "path": "../Drivers/Mode/Inc/Mode_pid.h"
                       },
                       {
-                        "path": "../Mode/Inc/Mode_config.h"
+                        "path": "../Drivers/Mode/Inc/Mode_reverse.h"
                       },
                       {
-                        "path": "../Mode/Inc/Mode_K230.h"
+                        "path": "../Drivers/Mode/Inc/Mode_straight.h"
                       },
                       {
-                        "path": "../Mode/Inc/Mode_superUI.h"
+                        "path": "../Drivers/Mode/Inc/Mode_superUI.h"
                       },
                       {
-                        "path": "../Mode/Inc/Mode_UI.h"
+                        "path": "../Drivers/Mode/Inc/Mode_trace.h"
                       },
                       {
-                        "path": "../Mode/Inc/Mode_pid.h"
+                        "path": "../Drivers/Mode/Inc/Mode_turn.h"
                       },
                       {
-                        "path": "../Mode/Inc/Mode.h"
+                        "path": "../Drivers/Mode/Inc/Mode_UI.h"
                       }
                     ],
                     "folders": []
@@ -152,131 +149,41 @@
                     "name": "Hardware_Inc",
                     "files": [
                       {
-                        "path": "../Hardware/Inc/filter.h"
+                        "path": "../Drivers/Hardware/Inc/filter.h"
                       },
                       {
-                        "path": "../Hardware/Inc/gw_grayscale_sensor.h"
+                        "path": "../Drivers/Hardware/Inc/gw_grayscale_sensor.h"
                       },
                       {
-                        "path": "../Hardware/Inc/GWKJ.h"
+                        "path": "../Drivers/Hardware/Inc/GWKJ.h"
                       },
                       {
-                        "path": "../Hardware/Inc/HMC5883.h"
+                        "path": "../Drivers/Hardware/Inc/Hardware.h"
                       },
                       {
-                        "path": "../Hardware/Inc/jy61p.h"
+                        "path": "../Drivers/Hardware/Inc/HMC5883.h"
                       },
                       {
-                        "path": "../Hardware/Inc/mpu6050.h"
+                        "path": "../Drivers/Hardware/Inc/jy61p.h"
                       },
                       {
-                        "path": "../Hardware/Inc/oled.h"
+                        "path": "../Drivers/Hardware/Inc/mpu6050.h"
                       },
                       {
-                        "path": "../Hardware/Inc/oledfont.h"
+                        "path": "../Drivers/Hardware/Inc/oled.h"
                       },
                       {
-                        "path": "../Hardware/Inc/TB6612.h"
+                        "path": "../Drivers/Hardware/Inc/oledfont.h"
                       },
                       {
-                        "path": "../Hardware/Inc/Hardware.h"
+                        "path": "../Drivers/Hardware/Inc/TB6612.h"
                       }
                     ],
                     "folders": []
                   }
                 ]
-              },
-              {
-                "name": "Hardware",
-                "files": [
-                  {
-                    "path": "../Hardware/Src/filter.c"
-                  },
-                  {
-                    "path": "../Hardware/Src/GWKJ.c"
-                  },
-                  {
-                    "path": "../Hardware/Src/HMC5883.c"
-                  },
-                  {
-                    "path": "../Hardware/Src/jy61p.c"
-                  },
-                  {
-                    "path": "../Hardware/Src/oled.c"
-                  },
-                  {
-                    "path": "../Hardware/Src/TB6612.c"
-                  },
-                  {
-                    "path": "../Hardware/Src/mpu6050.c"
-                  },
-                  {
-                    "path": "../Hardware/Src/oledfont.c"
-                  }
-                ],
-                "folders": []
-              },
-              {
-                "name": "Mode",
-                "files": [
-                  {
-                    "path": "../Mode/Src/Mode_config.c"
-                  },
-                  {
-                    "path": "../Mode/Src/Mode_encoder.c"
-                  },
-                  {
-                    "path": "../Mode/Src/Mode_K230.c"
-                  },
-                  {
-                    "path": "../Mode/Src/Mode_motion.c"
-                  },
-                  {
-                    "path": "../Mode/Src/Mode_path.c"
-                  },
-                  {
-                    "path": "../Mode/Src/Mode_path_serial.c"
-                  },
-                  {
-                    "path": "../Mode/Src/Mode_reverse.c"
-                  },
-                  {
-                    "path": "../Mode/Src/Mode_straight.c"
-                  },
-                  {
-                    "path": "../Mode/Src/Mode_superUI.c"
-                  },
-                  {
-                    "path": "../Mode/Src/Mode_trace.c"
-                  },
-                  {
-                    "path": "../Mode/Src/Mode_turn.c"
-                  },
-                  {
-                    "path": "../Mode/Src/Mode_UI.c"
-                  },
-                  {
-                    "path": "../Mode/Src/Mode_pid.c"
-                  }
-                ],
-                "folders": []
               }
             ]
-          },
-          {
-            "name": "Task",
-            "files": [
-              {
-                "path": "../Task/Src/config.c"
-              },
-              {
-                "path": "../Task/Src/further_task.c"
-              },
-              {
-                "path": "../Task/Src/basic_task.c"
-              }
-            ],
-            "folders": []
           }
         ]
       },
@@ -358,8 +265,101 @@
               }
             ],
             "folders": []
+          },
+          {
+            "name": "Hardware",
+            "files": [
+              {
+                "path": "../Drivers/Hardware/Src/filter.c"
+              },
+              {
+                "path": "../Drivers/Hardware/Src/GWKJ.c"
+              },
+              {
+                "path": "../Drivers/Hardware/Src/HMC5883.c"
+              },
+              {
+                "path": "../Drivers/Hardware/Src/jy61p.c"
+              },
+              {
+                "path": "../Drivers/Hardware/Src/mpu6050.c"
+              },
+              {
+                "path": "../Drivers/Hardware/Src/oled.c"
+              },
+              {
+                "path": "../Drivers/Hardware/Src/oledfont.c"
+              },
+              {
+                "path": "../Drivers/Hardware/Src/TB6612.c"
+              }
+            ],
+            "folders": []
+          },
+          {
+            "name": "Mode",
+            "files": [
+              {
+                "path": "../Drivers/Mode/Src/Mode_config.c"
+              },
+              {
+                "path": "../Drivers/Mode/Src/Mode_encoder.c"
+              },
+              {
+                "path": "../Drivers/Mode/Src/Mode_K230.c"
+              },
+              {
+                "path": "../Drivers/Mode/Src/Mode_motion.c"
+              },
+              {
+                "path": "../Drivers/Mode/Src/Mode_path.c"
+              },
+              {
+                "path": "../Drivers/Mode/Src/Mode_path_serial.c"
+              },
+              {
+                "path": "../Drivers/Mode/Src/Mode_pid.c"
+              },
+              {
+                "path": "../Drivers/Mode/Src/Mode_reverse.c"
+              },
+              {
+                "path": "../Drivers/Mode/Src/Mode_straight.c"
+              },
+              {
+                "path": "../Drivers/Mode/Src/Mode_superUI.c"
+              },
+              {
+                "path": "../Drivers/Mode/Src/Mode_trace.c"
+              },
+              {
+                "path": "../Drivers/Mode/Src/Mode_turn.c"
+              },
+              {
+                "path": "../Drivers/Mode/Src/Mode_UI.c"
+              }
+            ],
+            "folders": []
           }
         ]
+      },
+      {
+        "name": "Task",
+        "files": [
+          {
+            "path": "../Task/Src/config.c"
+          },
+          {
+            "path": "../Task/Src/further_task.c"
+          },
+          {
+            "path": "../Task/Src/basic_task.c"
+          },
+          {
+            "path": "../Core/Src/main.c"
+          }
+        ],
+        "folders": []
       }
     ]
   },
