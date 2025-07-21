@@ -466,10 +466,10 @@
           "../Drivers/CMSIS/Device/ST/STM32H7xx/Include",
           "../Drivers/CMSIS/Include",
           ".cmsis/include",
-          "RTE/_2021F",
-          "../Mode/Inc",
-          "../Hardware/Inc",
-          "../Task/Inc"
+          "RTE/_model",
+          "../Task/Inc",
+          "../Drivers/Hardware/Inc",
+          "../Drivers/Mode/Inc"
         ],
         "libList": [],
         "defineList": [
