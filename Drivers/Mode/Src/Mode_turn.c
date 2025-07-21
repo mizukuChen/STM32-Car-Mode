@@ -75,18 +75,18 @@ void autoturn_serial(int8_t flag, float turn_speed) // 从当前位置旋转至�
 	float speed = flag * turn_speed;
 	float start_angle = Yaw;
 	uint8_t value[8];
-	get_T_serial(value);
+	get_path_serial(value);
 
 	while (value[4-1] || value[5-1])
 	{
-		get_T_serial(value);
+		get_path_serial(value);
 		Set_PWM(-speed, speed);
 		HAL_Delay(10);
 	} // 先脱离当前轨道
 
 	while (!(value[4-1] || value[5-1]) || (Yaw-start_angle)*flag < 70 )
 	{
-		get_T_serial(value);
+		get_path_serial(value);
 		Set_PWM(-speed, speed);
 		HAL_Delay(10);
 	} // 中间两路寻到轨迹后判断中间靠边两路

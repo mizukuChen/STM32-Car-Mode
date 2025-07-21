@@ -135,7 +135,7 @@ void config_trace_sensor_serial(){
     uint8_t value[8];
     char msg[9] = {0};
     while(1){
-        get_T_serial(value);
+        get_path_serial(value);
         for(uint8_t i = 0; i<8; i++){
             msg[i] = value[7-i] +'0';
             OLED_ShowString(0,20,msg,8,1);

@@ -95,16 +95,16 @@
         {
             "name": "model",
             "includePath": [
-                "d:\\work_office\\keil_project\\abstract\\Core\\Inc",
-                "d:\\work_office\\keil_project\\abstract\\Drivers\\STM32H7xx_HAL_Driver\\Inc",
-                "d:\\work_office\\keil_project\\abstract\\Drivers\\STM32H7xx_HAL_Driver\\Inc\\Legacy",
-                "d:\\work_office\\keil_project\\abstract\\Drivers\\CMSIS\\Device\\ST\\STM32H7xx\\Include",
-                "d:\\work_office\\keil_project\\abstract\\Drivers\\CMSIS\\Include",
-                "D:\\work_office\\Keil_v5\\ARM\\ARMCC\\include",
-                "D:\\work_office\\Keil_v5\\ARM\\ARMCC\\include\\rw",
-                "d:\\work_office\\keil_project\\abstract\\MDK-ARM",
-                "d:\\work_office\\keil_project\\abstract\\Core\\Src",
-                "d:\\work_office\\keil_project\\abstract\\Drivers\\STM32H7xx_HAL_Driver\\Src"
+                "e:\\Learning\\STM32\\STM32-Car-Mode\\Core\\Inc",
+                "e:\\Learning\\STM32\\STM32-Car-Mode\\Drivers\\STM32H7xx_HAL_Driver\\Inc",
+                "e:\\Learning\\STM32\\STM32-Car-Mode\\Drivers\\STM32H7xx_HAL_Driver\\Inc\\Legacy",
+                "e:\\Learning\\STM32\\STM32-Car-Mode\\Drivers\\CMSIS\\Device\\ST\\STM32H7xx\\Include",
+                "e:\\Learning\\STM32\\STM32-Car-Mode\\Drivers\\CMSIS\\Include",
+                "D:\\Keil_v5\\ARM\\ARMCC\\include",
+                "D:\\Keil_v5\\ARM\\ARMCC\\include\\rw",
+                "e:\\Learning\\STM32\\STM32-Car-Mode\\MDK-ARM",
+                "e:\\Learning\\STM32\\STM32-Car-Mode\\Core\\Src",
+                "e:\\Learning\\STM32\\STM32-Car-Mode\\Drivers\\STM32H7xx_HAL_Driver\\Src"
             ],
             "defines": [
                 "USE_HAL_DRIVER",

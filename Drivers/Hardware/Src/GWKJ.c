@@ -370,7 +370,8 @@ int8_t sw_i2c_write_for_temp(sw_i2c_interface_t *i2c_interface, uint8_t dev_addr
 
 uint8_t GW_digital_TempRead(void)
 {
-	sw_i2c_write_for_temp(&i2c_interface, 0x4C << 1, GW_GRAY_DIGITAL_MODE, 1);
+	uint8_t data = GW_GRAY_DIGITAL_MODE;
+	sw_i2c_write_for_temp(&i2c_interface, 0x4C << 1, &data, 1);
 	uint8_t digital_data;
 	/* 读取开关量数据 */
 	sw_i2c_read_byte(&i2c_interface, 0x4C << 1, &digital_data); // digital_data 有1~8号探头开关数据

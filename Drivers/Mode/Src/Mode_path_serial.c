@@ -26,7 +26,7 @@ void get_path_serial(uint8_t value[])
 uint8_t get_T_serial(uint8_t flag)
 {
     uint8_t value[8];
-    get_T_serial(value);
+    get_path_serial(value);
     return value[flag - 1];
 }
 
