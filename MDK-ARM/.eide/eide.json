@@ -43,82 +43,13 @@
                     "path": "../Core/Src/usart.c"
                   },
                   {
-                    "path": "../Core/Src/stm32h7xx_it.c"
-                  },
-                  {
-                    "path": "../Core/Src/config.c"
-                  },
-                  {
-                    "path": "../Core/Src/further_task.c"
-                  },
-                  {
-                    "path": "../Core/Src/further_task_A.c"
-                  },
-                  {
-                    "path": "../Core/Src/further_task_B.c"
-                  },
-                  {
-                    "path": "../Core/Src/microtask.c"
-                  },
-                  {
-                    "path": "../Core/Src/mode.c"
-                  },
-                  {
-                    "path": "../Core/Src/mpu6050.c"
-                  },
-                  {
-                    "path": "../Core/Src/mytask.c"
-                  },
-                  {
-                    "path": "../Core/Src/new_task.c"
-                  },
-                  {
-                    "path": "../Core/Src/pid.c"
-                  },
-                  {
-                    "path": "../Core/Src/superUI.c"
-                  },
-                  {
-                    "path": "../Core/Src/Trace.c"
-                  },
-                  {
-                    "path": "../Core/Src/UI.c"
+                    "path": "../Core/Src/system_stm32h7xx.c"
                   }
                 ],
                 "folders": []
               },
               {
-                "name": "Mode",
-                "files": [
-                  {
-                    "path": "../Mode/Src/Mode_encoder.c"
-                  },
-                  {
-                    "path": "../Mode/Src/Mode_motion.c"
-                  },
-                  {
-                    "path": "../Mode/Src/Mode_reverse.c"
-                  },
-                  {
-                    "path": "../Mode/Src/Mode_straight.c"
-                  },
-                  {
-                    "path": "../Mode/Src/Mode_trace.c"
-                  },
-                  {
-                    "path": "../Mode/Src/Mode_turn.c"
-                  },
-                  {
-                    "path": "../Mode/Src/Mode_path.c"
-                  },
-                  {
-                    "path": "../Mode/Src/Mode_path_serial.c"
-                  }
-                ],
-                "folders": []
-              },
-              {
-                "name": "Inc",
+                "name": "Include",
                 "files": [],
                 "folders": [
                   {
@@ -134,9 +65,6 @@
                         "path": "../Core/Inc/main.h"
                       },
                       {
-                        "path": "../Core/Inc/pid.h"
-                      },
-                      {
                         "path": "../Core/Inc/stm32h7xx_hal_conf.h"
                       },
                       {
@@ -146,10 +74,10 @@
                         "path": "../Core/Inc/tim.h"
                       },
                       {
-                        "path": "../Core/Inc/UI.h"
+                        "path": "../Core/Inc/usart.h"
                       },
                       {
-                        "path": "../Core/Inc/usart.h"
+                        "path": "../Core/Inc/Core.h"
                       }
                     ],
                     "folders": []
@@ -180,6 +108,24 @@
                       },
                       {
                         "path": "../Mode/Inc/Mode_turn.h"
+                      },
+                      {
+                        "path": "../Mode/Inc/Mode_config.h"
+                      },
+                      {
+                        "path": "../Mode/Inc/Mode_K230.h"
+                      },
+                      {
+                        "path": "../Mode/Inc/Mode_superUI.h"
+                      },
+                      {
+                        "path": "../Mode/Inc/Mode_UI.h"
+                      },
+                      {
+                        "path": "../Mode/Inc/Mode_pid.h"
+                      },
+                      {
+                        "path": "../Mode/Inc/Mode.h"
                       }
                     ],
                     "folders": []
@@ -188,10 +134,16 @@
                     "name": "Task_Inc",
                     "files": [
                       {
-                        "path": "../Task/Inc/mytask.h"
+                        "path": "../Task/Inc/basic_task.h"
                       },
                       {
-                        "path": "../Task/Inc/task.h"
+                        "path": "../Task/Inc/config.h"
+                      },
+                      {
+                        "path": "../Task/Inc/further_task.h"
+                      },
+                      {
+                        "path": "../Task/Inc/Task.h"
                       }
                     ],
                     "folders": []
@@ -225,6 +177,9 @@
                       },
                       {
                         "path": "../Hardware/Inc/TB6612.h"
+                      },
+                      {
+                        "path": "../Hardware/Inc/Hardware.h"
                       }
                     ],
                     "folders": []
@@ -251,38 +206,77 @@
                   },
                   {
                     "path": "../Hardware/Src/TB6612.c"
+                  },
+                  {
+                    "path": "../Hardware/Src/mpu6050.c"
+                  },
+                  {
+                    "path": "../Hardware/Src/oledfont.c"
                   }
                 ],
                 "folders": []
               },
               {
-                "name": "Task",
+                "name": "Mode",
                 "files": [
                   {
-                    "path": "../Task/Src/further_task.c"
+                    "path": "../Mode/Src/Mode_config.c"
                   },
                   {
-                    "path": "../Task/Src/further_task_A.c"
+                    "path": "../Mode/Src/Mode_encoder.c"
                   },
                   {
-                    "path": "../Task/Src/further_task_B.c"
+                    "path": "../Mode/Src/Mode_K230.c"
                   },
                   {
-                    "path": "../Task/Src/microtask.c"
+                    "path": "../Mode/Src/Mode_motion.c"
                   },
                   {
-                    "path": "../Task/Src/mytask.c"
+                    "path": "../Mode/Src/Mode_path.c"
                   },
                   {
-                    "path": "../Task/Src/new_task.c"
+                    "path": "../Mode/Src/Mode_path_serial.c"
                   },
                   {
-                    "path": "../Task/Src/Trace.c"
+                    "path": "../Mode/Src/Mode_reverse.c"
+                  },
+                  {
+                    "path": "../Mode/Src/Mode_straight.c"
+                  },
+                  {
+                    "path": "../Mode/Src/Mode_superUI.c"
+                  },
+                  {
+                    "path": "../Mode/Src/Mode_trace.c"
+                  },
+                  {
+                    "path": "../Mode/Src/Mode_turn.c"
+                  },
+                  {
+                    "path": "../Mode/Src/Mode_UI.c"
+                  },
+                  {
+                    "path": "../Mode/Src/Mode_pid.c"
                   }
                 ],
                 "folders": []
               }
             ]
+          },
+          {
+            "name": "Task",
+            "files": [
+              {
+                "path": "../Task/Src/config.c"
+              },
+              {
+                "path": "../Task/Src/further_task.c"
+              },
+              {
+                "path": "../Task/Src/basic_task.c"
+              }
+            ],
+            "folders": []
           }
         ]
       },

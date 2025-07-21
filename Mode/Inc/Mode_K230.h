@@ -1,5 +1,5 @@
-#ifndef __MODE_STRAIGHT_H__
-#define __MODE_STRAIGHT_H__
+#ifndef __MODE_K230_H__
+#define __MODE_K230_H__
 
 #include <main.h>
 

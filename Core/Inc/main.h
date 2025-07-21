@@ -31,22 +31,10 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "tim.h"
-#include "usart.h"
-#include "gpio.h"
-#include "i2c.h"
-#include "TB6612.h"
-#include "pid.h"
-#include "filter.h"
-#include "mpu6050.h"
-#include "task.h"
-#include "oled.h"
-#include "UI.h"
-#include "mytask.h"
-#include "jy61p.h"
-#include "gw_grayscale_sensor.h"
-#include "GWKJ.h"
-
+#include <Core.h>
+#include <Hardware.h>
+#include <Mode.h>
+#include <Task.h>
 
 #include <stdio.h>
 #include "math.h"

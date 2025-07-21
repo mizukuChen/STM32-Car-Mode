@@ -1,4 +1,8 @@
+// soperUI模组
+
 #include <main.h>
+#include <Mode_superUI.h>
+
 #define FUNCTION_NUMBER 6
 
 void superUI(uint8_t name[SUPER_NUMBER][SUPER_TASK_NUMBER], uint16_t value[SUPER_NUMBER][SUPER_TASK_NUMBER])
@@ -244,16 +248,16 @@ void single_work(uint8_t name, uint16_t value)
     switch (name)
     {
     case 1:
-        turn(value);
+        turn(value, 60, 1);
         break;
     case 2:
-        go_straight(Kyaw, 40);
+        go_straight(Yaw, 40);
         break;
     case 3:
-        trace();
+        trace(60);
         break;
     case 4:
-        reverse(value);
+        reverse_straight(Yaw, value);
         break;
     case 5:
         HAL_Delay(value);

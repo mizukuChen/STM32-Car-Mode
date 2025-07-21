@@ -1,4 +1,8 @@
+// UI模组
+
 #include <main.h>
+#include <Mode_UI.h>
+
 volatile bool key1state;
 volatile bool key2state;
 

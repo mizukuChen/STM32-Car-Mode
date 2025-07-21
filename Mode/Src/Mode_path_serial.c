@@ -1,4 +1,4 @@
-// 基础运动模组
+// 检测轨迹模组(串行)
 
 #include <main.h>
 #include <Mode_path_serial.h>

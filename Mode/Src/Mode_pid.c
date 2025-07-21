@@ -1,12 +1,15 @@
+// pid模组
+
 /**
- * @file    PID.c
+ * @file    Mode_pid.c
  * @version v1.3
  * @author  Bairu
  * @date    2024��8��21�� 16:09:44
  * @brief   PID�㷨(λ��ʽ������ʽ)
  */
 
-#include "pid.h"
+ #include <main.h>
+#include <Mode_pid.h>
 
 /**
  * @brief  λ��ʽPID������ʼ��
