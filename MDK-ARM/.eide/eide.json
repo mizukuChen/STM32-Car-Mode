@@ -370,7 +370,7 @@
     "uid": "e0ac2b1bfb77b7274ecf92bc84d603f3"
   },
   "targets": {
-    "2021F": {
+    "model": {
       "excludeList": [
         "<virtual_root>/Application/User/Core/config.c",
         "<virtual_root>/Application/User/Core/further_task_A.c",
@@ -441,7 +441,7 @@
         "speed": 4000,
         "address": "0x8000000",
         "elFile": "None",
-        "optionBytes": ".eide/2021f.st.option.bytes.ini",
+        "optionBytes": ".eide/model.st.option.bytes.ini",
         "otherCmds": ""
       },
       "uploadConfigMap": {
