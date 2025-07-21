@@ -1,5 +1,5 @@
 {
-  "name": "2021F",
+  "name": "model",
   "type": "ARM",
   "dependenceList": [],
   "srcDirs": [],
@@ -43,7 +43,7 @@
                     "path": "../Core/Src/usart.c"
                   },
                   {
-                    "path": "../Core/Src/system_stm32h7xx.c"
+                    "path": "../Core/Src/stm32h7xx_it.c"
                   }
                 ],
                 "folders": []
@@ -382,7 +382,6 @@
         "<virtual_root>/Application/User/Core/mytask.c",
         "<virtual_root>/Application/User/Core/new_task.c",
         "<virtual_root>/Application/User/Core/stm32h7xx_hal_msp.c",
-        "<virtual_root>/Application/User/Core/stm32h7xx_it.c",
         "<virtual_root>/Application/User/Core/superUI.c",
         "<virtual_root>/Application/User/Core/Trace.c",
         "<virtual_root>/Application/User/Core/UI.c",

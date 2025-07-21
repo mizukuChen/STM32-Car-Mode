@@ -17,7 +17,7 @@
 		<dwHighDateTime>0</dwHighDateTime>
 	</DaveTm>
 	<Target>
-		<TargetName>2021F</TargetName>
+		<TargetName>model</TargetName>
 		<ToolsetNumber>0x4</ToolsetNumber>
 		<ToolsetName>ARM-ADS</ToolsetName>
 		<TargetOption>
