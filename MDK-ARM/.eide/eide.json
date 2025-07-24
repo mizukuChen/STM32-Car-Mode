@@ -177,6 +177,9 @@
                       },
                       {
                         "path": "../Drivers/Hardware/Inc/TB6612.h"
+                      },
+                      {
+                        "path": "../Drivers/Hardware/Inc/28byj48.h"
                       }
                     ],
                     "folders": []
@@ -292,6 +295,9 @@
               },
               {
                 "path": "../Drivers/Hardware/Src/TB6612.c"
+              },
+              {
+                "path": "../Drivers/Hardware/Src/28byj48.c"
               }
             ],
             "folders": []
