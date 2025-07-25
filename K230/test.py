@@ -2,6 +2,9 @@ from machine import Pin
 from machine import FPIOA
 import time
 
+
+
+
 # 实例化FPIOA
 fpioa = FPIOA()
 
@@ -95,3 +98,17 @@ class Stepper:
         """
         steps = int(circles * STEPS_PER_CIRCLE)
         self.step(motor_idx, steps, delay_ms)
+
+
+Xin = [12,14,16,18]
+Yin = [32,33,34,35]
+fpioa.set_function(32,FPIOA.GPIO32)
+fpioa.set_function(33,FPIOA.GPIO33)
+fpioa.set_function(34,FPIOA.GPIO34)
+fpioa.set_function(35,FPIOA.GPIO35)
+#fpioa.set_function(13,FPIOA.GPIO13)
+stepper = Stepper(Xin,Yin)
+while True:
+    stepper.step(1, -50, 3)
+    time.sleep(2)
+    pass
