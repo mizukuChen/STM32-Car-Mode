@@ -23,24 +23,22 @@ static const GPIO_PinState step_sequence[8][4] = {
     {1, 0, 0, 1}
 };
 
-uint8_t step_motor_status[2] = {0};
-
 void StepMotor_Init(void) {
     // 引脚初始化已由 CubeMX 完成，此处保留接口便于扩展
 }
 
 static inline void StepMotor_WritePins_Width(const GPIO_PinState value[]) {
-    HAL_GPIO_WritePin(WIN1_GPIO_Port, WIN1_Pin, value[0]);
-    HAL_GPIO_WritePin(WIN2_GPIO_Port, WIN2_Pin, value[1]);
-    HAL_GPIO_WritePin(WIN3_GPIO_Port, WIN3_Pin, value[2]);
-    HAL_GPIO_WritePin(WIN4_GPIO_Port, WIN4_Pin, value[3]);
+    HAL_GPIO_WritePin(XIN1_GPIO_Port, XIN1_Pin, value[0]);
+    HAL_GPIO_WritePin(XIN2_GPIO_Port, XIN2_Pin, value[1]);
+    HAL_GPIO_WritePin(XIN3_GPIO_Port, XIN3_Pin, value[2]);
+    HAL_GPIO_WritePin(XIN4_GPIO_Port, XIN4_Pin, value[3]);
 }
 
 static inline void StepMotor_WritePins_Heigth(const GPIO_PinState value[]) {
-    HAL_GPIO_WritePin(HIN1_GPIO_Port, HIN1_Pin, value[0]);
-    HAL_GPIO_WritePin(HIN2_GPIO_Port, HIN2_Pin, value[1]);
-    HAL_GPIO_WritePin(HIN3_GPIO_Port, HIN3_Pin, value[2]);
-    HAL_GPIO_WritePin(HIN4_GPIO_Port, HIN4_Pin, value[3]);
+    HAL_GPIO_WritePin(YIN1_GPIO_Port, YIN1_Pin, value[0]);
+    HAL_GPIO_WritePin(YIN2_GPIO_Port, YIN2_Pin, value[1]);
+    HAL_GPIO_WritePin(YIN3_GPIO_Port, YIN3_Pin, value[2]);
+    HAL_GPIO_WritePin(YIN4_GPIO_Port, YIN4_Pin, value[3]);
 }
 
 void StepMotor_SetSpeed(uint8_t motor_mane, int32_t step_count, uint8_t delay_time) {
@@ -70,11 +68,11 @@ void StepMotor_SetSpeed(uint8_t motor_mane, int32_t step_count, uint8_t delay_ti
     }
 }
 
-void StepMotor_RotateAngle(uint8_t motor_mane, float angle_deg, uint8_t delay_time) {
+void StepMotor_TurnAngle(uint8_t motor_mane, float angle_deg, uint8_t delay_time) {
     StepMotor_SetSpeed(motor_mane, (int32_t)((angle_deg / DEG_PER_STEP) + 0.5f), delay_time);
 }
 
-void StepMotor_RotateCircle(uint8_t motor_mane, int8_t circles, uint8_t delay_time) {
+void StepMotor_TurnCircle(uint8_t motor_mane, int8_t circles, uint8_t delay_time) {
     StepMotor_SetSpeed(motor_mane, circles * STEPS_PER_CIRCLE, delay_time);
 }
 

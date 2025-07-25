@@ -58,15 +58,15 @@ void MX_GPIO_Init(void)
   HAL_GPIO_WritePin(GPIOC, OLED_D0_Pin|AIN2_Pin|AIN1_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, OLED_D1_Pin|OLED_RES_Pin|OLED_DC_Pin|WIN4_Pin
-                          |HIN4_Pin|SCL_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOB, OLED_D1_Pin|OLED_RES_Pin|OLED_DC_Pin|XIN4_Pin
+                          |YIN4_Pin|SCL_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(OLED_CS_GPIO_Port, OLED_CS_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOD, BIN2_Pin|BIN1_Pin|WIN1_Pin|HIN1_Pin
-                          |WIN2_Pin|HIN2_Pin|WIN3_Pin|HIN3_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOD, BIN2_Pin|BIN1_Pin|XIN1_Pin|YIN1_Pin
+                          |XIN2_Pin|YIN2_Pin|XIN3_Pin|YIN3_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin : PtPin */
   GPIO_InitStruct.Pin = KEY1_Pin;
@@ -138,15 +138,15 @@ void MX_GPIO_Init(void)
 
   /*Configure GPIO pins : PDPin PDPin PDPin PDPin
                            PDPin PDPin */
-  GPIO_InitStruct.Pin = WIN1_Pin|HIN1_Pin|WIN2_Pin|HIN2_Pin
-                          |WIN3_Pin|HIN3_Pin;
+  GPIO_InitStruct.Pin = XIN1_Pin|YIN1_Pin|XIN2_Pin|YIN2_Pin
+                          |XIN3_Pin|YIN3_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_PULLDOWN;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
   HAL_GPIO_Init(GPIOD, &GPIO_InitStruct);
 
   /*Configure GPIO pins : PBPin PBPin */
-  GPIO_InitStruct.Pin = WIN4_Pin|HIN4_Pin;
+  GPIO_InitStruct.Pin = XIN4_Pin|YIN4_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_PULLDOWN;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
