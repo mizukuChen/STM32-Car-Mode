@@ -120,14 +120,15 @@ int main(void)
 	//MPU6050_Init();
 	OLED_Init();
 	TB6612_Init();
+  HAL_GPIO_WritePin(LEDR_GPIO_Port, LEDG_Pin, 0);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    //UI_Control();
-    config2();
+    UI_Control();
+    //config();
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

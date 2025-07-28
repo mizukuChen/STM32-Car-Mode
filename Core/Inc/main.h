@@ -115,10 +115,10 @@ void Error_Handler(void);
 #define BOUT1_GPIO_Port GPIOD
 #define BOUT2_Pin GPIO_PIN_13
 #define BOUT2_GPIO_Port GPIOD
-#define BIN2_Pin GPIO_PIN_14
-#define BIN2_GPIO_Port GPIOD
-#define BIN1_Pin GPIO_PIN_15
+#define BIN1_Pin GPIO_PIN_14
 #define BIN1_GPIO_Port GPIOD
+#define BIN2_Pin GPIO_PIN_15
+#define BIN2_GPIO_Port GPIOD
 #define PWMB_Pin GPIO_PIN_8
 #define PWMB_GPIO_Port GPIOC
 #define AOUT1_Pin GPIO_PIN_8
@@ -127,10 +127,10 @@ void Error_Handler(void);
 #define AOUT2_GPIO_Port GPIOA
 #define PWMA_Pin GPIO_PIN_15
 #define PWMA_GPIO_Port GPIOA
-#define AIN2_Pin GPIO_PIN_10
-#define AIN2_GPIO_Port GPIOC
-#define AIN1_Pin GPIO_PIN_11
+#define AIN1_Pin GPIO_PIN_10
 #define AIN1_GPIO_Port GPIOC
+#define AIN2_Pin GPIO_PIN_11
+#define AIN2_GPIO_Port GPIOC
 #define DETECT_Pin GPIO_PIN_1
 #define DETECT_GPIO_Port GPIOD
 #define XIN1_Pin GPIO_PIN_2

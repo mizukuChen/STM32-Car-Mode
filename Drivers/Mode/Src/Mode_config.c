@@ -25,61 +25,140 @@ void config_find_encoder()
     }
 }
 
-void config_speed_by_encoder()
+void config_speed_by_encoder(float speedL, float speedR)
 {
     char msg1[10], msg2[10];
-    float PWMAtest, PWMBtest; // 目标PWM输出值
     PID PWMPID;
-    float PWMPID_Kp = 0.01, PWMPID_Ki = 0, PWMPID_Kd = 0;
-    float PWMPID_Target = 0, PWMPID_MinOutput = -2, PWMPID_MaxOutput = 2;
-    int16_t Pencoder_num[2]; // 读编码器的
-    int16_t targetB, targetA;
-    PWMBtest = -60.0f;
-    PWMAtest = PWMBtest;
+    PWMPID.Kp = 0.01, PWMPID.Ki = 0, PWMPID.Kd = 0;
+    PWMPID.target = 0, PWMPID.minOutput = -2, PWMPID.maxOutput = 2;
+    PWMPID.error = 0, PWMPID.last_error = 0, PWMPID.integral = 0;
+
+    int16_t encoder[2]; // 读编码器数值
 
     __HAL_TIM_DISABLE(&htim7); // 关tim7防止中断影响
     __HAL_TIM_DISABLE_IT(&htim7, TIM_IT_UPDATE);
 
     HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
     HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_3);
-    HAL_TIM_Encoder_Start(&htim1, TIM_CHANNEL_ALL);
-    HAL_TIM_Encoder_Start(&htim4, TIM_CHANNEL_ALL);
 
-    reset_encoder();
-    Set_PWM(PWMBtest, PWMAtest);
-    HAL_Delay(500);
-    read_encoder(Pencoder_num);
-
-    PID_Init(&PWMPID, PWMPID_Kp, PWMPID_Ki, PWMPID_Kd, PWMPID_Target, 0, 0, PWMPID_MinOutput, PWMPID_MaxOutput);
-
-    do
+    if (speedL == 0)
     {
-        targetA = Pencoder_num[0];
-        targetB = Pencoder_num[1];
-        PWMAtest = PWMBtest - PID_Compute(&PWMPID, targetB - targetA);
+        speedL = speedR;
+        do
+        {
+            set_encoder(0, 0);
+            Set_PWM(speedL, speedR);
+            HAL_Delay(500);
+            read_encoder(encoder);
 
-        sprintf(msg1, ":%d,%d", Pencoder_num[1], Pencoder_num[0]);
-        OLED_ShowString(0, 20, msg1, 8, 1);
-        sprintf(msg2, "B:%.2f,A:%.2f", PWMBtest, PWMAtest);
-        OLED_ShowString(0, 30, msg2, 8, 1);
-        OLED_Refresh();
+            sprintf(msg1, ":%d,%d", encoder[1], encoder[0]);
+            OLED_ShowString(0, 20, msg1, 8, 1);
+            sprintf(msg2, "R:%.2f,L:%.2f", speedR, speedL);
+            OLED_ShowString(0, 30, msg2, 8, 1);
+            OLED_Refresh();
 
-        reset_encoder();
-        Set_PWM(PWMBtest, PWMAtest);
-        HAL_Delay(500);
-        read_encoder(Pencoder_num);
-    } while (abs(Pencoder_num[0] - Pencoder_num[1]) > 2);
+            speedL = speedL + PID_Compute(&PWMPID, encoder[0] - encoder[1]);
+
+        } while (abs(encoder[0] - encoder[1]) > 2);
+    }
+
+    if (speedR == 0)
+    {
+        speedR = speedL;
+        do
+        {
+            set_encoder(0, 0);
+            Set_PWM(speedL, speedR);
+            HAL_Delay(500);
+            read_encoder(encoder);
+
+            sprintf(msg1, ":%d,%d", encoder[1], encoder[0]);
+            OLED_ShowString(0, 20, msg1, 8, 1);
+            sprintf(msg2, "R:%.2f,L:%.2f", speedR, speedL);
+            OLED_ShowString(0, 30, msg2, 8, 1);
+            OLED_Refresh();
+
+            speedR = speedR + PID_Compute(&PWMPID, encoder[1] - encoder[0]);
+
+        } while (abs(encoder[0] - encoder[1]) > 2);
+    }
 
     stop();
     {
-        sprintf(msg1, ":%d,%d", Pencoder_num[1], Pencoder_num[0]);
+        sprintf(msg1, ":%d,%d", encoder[1], encoder[0]);
         OLED_ShowString(0, 20, msg1, 8, 1);
-        sprintf(msg2, "B:%.2f,A:%.2f", PWMAtest, PWMBtest);
+        sprintf(msg2, "B:%.2f,A:%.2f", speedR, speedL);
         OLED_ShowString(0, 30, msg2, 8, 1);
         OLED_Refresh();
     }
     while (1)
         ;
+}
+
+void config_speed_by_encoder_global(float speedL, float speedR)
+{
+    PID PWMPID;
+    PWMPID.Kp = 0.01, PWMPID.Ki = 0, PWMPID.Kd = 0;
+    PWMPID.target = 0, PWMPID.minOutput = -2, PWMPID.maxOutput = 2;
+    PWMPID.error = 0, PWMPID.last_error = 0, PWMPID.integral = 0;
+
+    char msg1[10], msg2[10];
+    int16_t encoder[2]; // 读编码器数值
+
+    __HAL_TIM_DISABLE(&htim7); // 关tim7防止中断影响
+    __HAL_TIM_DISABLE_IT(&htim7, TIM_IT_UPDATE);
+
+    HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
+    HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_3);
+
+    L_ratio = 1;
+    R_ratio = 1;//复位两轮的速度参考值
+
+    if (speedL == 0)
+    {
+        speedL = speedR;
+        do
+        {
+            set_encoder(0, 0);
+            Set_PWM(speedL, speedR);
+            HAL_Delay(500);
+            read_encoder(encoder);
+
+            sprintf(msg1, ":%d,%d", encoder[1], encoder[0]);
+            OLED_ShowString(0, 20, msg1, 8, 1);
+            sprintf(msg2, "R:%.2f,L:%.2f", speedR, speedL);
+            OLED_ShowString(0, 30, msg2, 8, 1);
+            OLED_Refresh();
+
+            speedL = speedL + PID_Compute(&PWMPID, encoder[0] - encoder[1]);
+
+        } while (abs(encoder[0] - encoder[1]) > 2);
+
+        L_ratio = speedL / speedR;//修改左轮的速度参考值
+    }
+
+    if (speedR == 0)
+    {
+        speedR = speedL;
+        do
+        {
+            set_encoder(0, 0);
+            Set_PWM(speedL, speedR);
+            HAL_Delay(500);
+            read_encoder(encoder);
+
+            sprintf(msg1, ":%d,%d", encoder[1], encoder[0]);
+            OLED_ShowString(0, 20, msg1, 8, 1);
+            sprintf(msg2, "R:%.2f,L:%.2f", speedR, speedL);
+            OLED_ShowString(0, 30, msg2, 8, 1);
+            OLED_Refresh();
+
+            speedR = speedR + PID_Compute(&PWMPID, encoder[1] - encoder[0]);
+
+        } while (abs(encoder[0] - encoder[1]) > 2);
+
+        R_ratio = speedR / speedL;//修改右轮的速度参考值
+    }
 }
 
 void config_show_encoder(float speed1, float speed2)
@@ -154,6 +233,47 @@ void config_trace_sensor_serial()
             OLED_ShowString(0, 20, msg, 8, 1);
             OLED_Refresh();
         }
+    }
+}
+
+void config_trace_digital_i2c()
+{
+    uint8_t value[8] = {0};
+    char msg[10] = {0};
+    HAL_Delay(200);
+    HAL_UART_Transmit(&huart1, "begin\n", 6, 30);
+    path_digital_init_i2c();
+    while (1)
+    {
+        get_T_eight_i2c(value);
+        for (uint8_t i = 0; i < 8; i++)
+        {
+            msg[i] = value[7 - i] + '0';
+        }
+        msg[8] = '\n';
+        HAL_UART_Transmit(&huart1, msg, 9, 30);
+        HAL_Delay(100);
+    }
+}
+
+void config_trace_analog_i2c()
+{
+    uint8_t value[8] = {0};
+    char msg[10] = {0};
+    HAL_Delay(200);
+    HAL_UART_Transmit(&huart1, "begin\n", 6, 30);
+    path_analog_init_i2c(0);
+    while (1)
+    {
+        get_T_analog_eight_i2c(value);
+        for (uint8_t i = 0; i < 8; i++)
+        {
+            sprintf(msg, "%d\t", value[i]);
+            HAL_UART_Transmit(&huart1, msg, 9, 30);
+        }
+        msg[0] = '\n';
+        msg[1] = 0;
+        HAL_UART_Transmit(&huart1, msg, 1, 30);
     }
 }
 

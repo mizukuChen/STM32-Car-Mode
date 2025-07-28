@@ -5,9 +5,13 @@
 #define PWM_Prescaler 0
 #define PWM_Period 10000
 
+extern float L_ratio;
+extern float R_ratio;
+
 void Set_PWM(float PWMB_in, float PWMA_in);//设置两轮速度
 void TB6612_Init();//// 初始化TB6612相关模组
 void reset_encoder();
+void set_encoder(uint32_t encoderA, uint32_t encoderB);
 
 void read_encoder(int16_t encoder[]);////阅读两编码器的值
 int16_t Read_Encoder(uint8_t TIMX);//阅读TIMX对应的编码器
