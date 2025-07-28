@@ -10,7 +10,7 @@ void config_find_encoder()
     __HAL_TIM_DISABLE(&htim7);
     reset_encoder();
     Set_PWM(60, 60);
-	HAL_Delay(150);
+    HAL_Delay(150);
     trace_to_cross(60);
 
     read_encoder(encoder);
@@ -25,7 +25,8 @@ void config_find_encoder()
     }
 }
 
-void config_speed_by_encoder(){
+void config_speed_by_encoder()
+{
     char msg1[10], msg2[10];
     float PWMAtest, PWMBtest; // 目标PWM输出值
     PID PWMPID;
@@ -52,7 +53,7 @@ void config_speed_by_encoder(){
     PID_Init(&PWMPID, PWMPID_Kp, PWMPID_Ki, PWMPID_Kd, PWMPID_Target, 0, 0, PWMPID_MinOutput, PWMPID_MaxOutput);
 
     do
-    {  
+    {
         targetA = Pencoder_num[0];
         targetB = Pencoder_num[1];
         PWMAtest = PWMBtest - PID_Compute(&PWMPID, targetB - targetA);
@@ -67,7 +68,7 @@ void config_speed_by_encoder(){
         Set_PWM(PWMBtest, PWMAtest);
         HAL_Delay(500);
         read_encoder(Pencoder_num);
-    }while (abs(Pencoder_num[0] - Pencoder_num[1]) > 2);
+    } while (abs(Pencoder_num[0] - Pencoder_num[1]) > 2);
 
     stop();
     {
@@ -77,10 +78,12 @@ void config_speed_by_encoder(){
         OLED_ShowString(0, 30, msg2, 8, 1);
         OLED_Refresh();
     }
-    while(1);
+    while (1)
+        ;
 }
 
-void config_show_encoder(float speed1, float speed2){
+void config_show_encoder(float speed1, float speed2)
+{
     int16_t encoder[2] = {0, 0};
     char msgA[20], msgB[20], msgspeed[20];
     __HAL_TIM_DISABLE(&htim7);
@@ -100,97 +103,97 @@ void config_show_encoder(float speed1, float speed2){
     }
 }
 
-void config_show_Kyaw(){
+void config_show_Kyaw()
+{
     char msg[9] = {0};
-    while(1){
-        sprintf(msg,"%f", Kyaw);
-        OLED_ShowString(0,20,msg,8,1);
+    while (1)
+    {
+        sprintf(msg, "%f", Kyaw);
+        OLED_ShowString(0, 20, msg, 8, 1);
         OLED_Refresh();
         HAL_Delay(10);
     }
 }
 
-void config_show_Yaw(){
+void config_show_Yaw()
+{
     char msg[9] = {0};
-    while(1){
-        sprintf(msg,"%f", Yaw);
-        OLED_ShowString(0,20,msg,8,1);
+    while (1)
+    {
+        sprintf(msg, "%f", Yaw);
+        OLED_ShowString(0, 20, msg, 8, 1);
         OLED_Refresh();
         HAL_Delay(10);
     }
 }
 
-void config_trace_sensor(){
+void config_trace_sensor()
+{
     char msg[9] = {0};
-    while(1){
-        for(uint8_t i = 0; i<8; i++){
-            msg[i] = get_T(7-i) +'0';
-            OLED_ShowString(0,20,msg,8,1);
+    while (1)
+    {
+        for (uint8_t i = 0; i < 8; i++)
+        {
+            msg[i] = get_T(7 - i) + '0';
+            OLED_ShowString(0, 20, msg, 8, 1);
             OLED_Refresh();
         }
     }
 }
 
-void config_trace_sensor_serial(){
+void config_trace_sensor_serial()
+{
     uint8_t value[8];
     char msg[9] = {0};
-    while(1){
-        get_path_serial(value);
-        for(uint8_t i = 0; i<8; i++){
-            msg[i] = value[7-i] +'0';
-            OLED_ShowString(0,20,msg,8,1);
+    while (1)
+    {
+        get_T_eight_serial(value);
+        for (uint8_t i = 0; i < 8; i++)
+        {
+            msg[i] = value[7 - i] + '0';
+            OLED_ShowString(0, 20, msg, 8, 1);
             OLED_Refresh();
         }
     }
 }
 
-void config_moter_Pin(){
-    while(1){
-        Set_PWM(50,0);
+void config_moter_Pin()
+{
+    while (1)
+    {
+        Set_PWM(50, 0);
         HAL_Delay(2000);
-        Set_PWM(0,50);
+        Set_PWM(0, 50);
         HAL_Delay(2000);
-        Set_PWM(50,50);
+        Set_PWM(50, 50);
         HAL_Delay(2000);
     }
 }
 
-void config_K230_read_nums(){
+void config_K230_read_nums()
+{
     char data[4];
-    while(1){
+    while (1)
+    {
         HAL_UART_Transmit(&huart1, "get\r\n", 5, 30);
         HAL_UART_Receive(&huart1, data, 4, HAL_MAX_DELAY);
         OLED_ShowString(0, 20, "vision", 8, 1);
         OLED_ShowString(0, 30, data, 8, 1);
         OLED_Refresh();
-        HAL_Delay(100);    
+        HAL_Delay(100);
     }
 }
 
-void config_K230_read_name(){
+void config_K230_read_name()
+{
     char data[4];
-    while(1){
+    while (1)
+    {
         HAL_UART_Transmit(&huart1, "name\r\n", 6, 30);
         HAL_UART_Receive(&huart1, data, 1, HAL_MAX_DELAY);
         OLED_ShowString(0, 20, "vision", 8, 1);
         OLED_ShowString(0, 30, data, 8, 1);
         OLED_Refresh();
-        HAL_Delay(100);    
+        HAL_Delay(100);
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

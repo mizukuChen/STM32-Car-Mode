@@ -98,12 +98,6 @@
                         "path": "../Drivers/Mode/Inc/Mode_motion.h"
                       },
                       {
-                        "path": "../Drivers/Mode/Inc/Mode_path.h"
-                      },
-                      {
-                        "path": "../Drivers/Mode/Inc/Mode_path_serial.h"
-                      },
-                      {
                         "path": "../Drivers/Mode/Inc/Mode_pid.h"
                       },
                       {
@@ -180,6 +174,15 @@
                       },
                       {
                         "path": "../Drivers/Hardware/Inc/28byj48.h"
+                      },
+                      {
+                        "path": "../Drivers/Hardware/Inc/path.h"
+                      },
+                      {
+                        "path": "../Drivers/Hardware/Inc/path_i2c.h"
+                      },
+                      {
+                        "path": "../Drivers/Hardware/Inc/path_serial.h"
                       }
                     ],
                     "folders": []
@@ -298,6 +301,15 @@
               },
               {
                 "path": "../Drivers/Hardware/Src/28byj48.c"
+              },
+              {
+                "path": "../Drivers/Hardware/Src/path.c"
+              },
+              {
+                "path": "../Drivers/Hardware/Src/path_serial.c"
+              },
+              {
+                "path": "../Drivers/Hardware/Src/path_i2c.c"
               }
             ],
             "folders": []
@@ -316,12 +328,6 @@
               },
               {
                 "path": "../Drivers/Mode/Src/Mode_motion.c"
-              },
-              {
-                "path": "../Drivers/Mode/Src/Mode_path.c"
-              },
-              {
-                "path": "../Drivers/Mode/Src/Mode_path_serial.c"
               },
               {
                 "path": "../Drivers/Mode/Src/Mode_pid.c"

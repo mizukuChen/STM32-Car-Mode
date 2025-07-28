@@ -10,5 +10,8 @@
 #include <oled.h>
 #include <oledfont.h>
 #include <TB6612.h>
+#include <path_serial.h>
+#include <path_i2c.h>
+#include <path.h>
 
 #endif

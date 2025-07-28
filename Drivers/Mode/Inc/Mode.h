@@ -5,8 +5,6 @@
 #include <Mode_encoder.h>
 #include <Mode_K230.h>
 #include <Mode_motion.h>
-#include <Mode_path_serial.h>
-#include <Mode_path.h>
 #include <Mode_pid.h>
 #include <Mode_reverse.h>
 #include <Mode_straight.h>

@@ -113,6 +113,7 @@ int main(void)
   MX_TIM13_Init();
   MX_TIM17_Init();
   MX_USART3_UART_Init();
+  MX_I2C1_Init();
   /* USER CODE BEGIN 2 */
   HAL_TIM_Base_Start_IT(&htim7);
   HAL_TIM_Base_Start_IT(&htim6);
@@ -125,7 +126,8 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    UI_Control();
+    //UI_Control();
+    config2();
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

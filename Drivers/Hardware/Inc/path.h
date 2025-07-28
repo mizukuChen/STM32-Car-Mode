@@ -1,5 +1,5 @@
-#ifndef __MODE_PATH_H__
-#define __MODE_PATH_H__
+#ifndef __PATH_H__
+#define __PATH_H__
 
 #include <main.h>
 

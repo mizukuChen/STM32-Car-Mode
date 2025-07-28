@@ -37,7 +37,7 @@ int trace_serial(float speed)
 	uint8_t value[8] = {0};
 	while (1) // 可在此添加跳出条件
 	{
-		get_path_serial(value);
+		get_T_eight_serial(value);
 		transform = PID_Compute(&TracePID, get_Terror_serial(value));
 		Set_PWM(speed - transform, speed + transform);
 		HAL_Delay(10);
@@ -98,11 +98,11 @@ void trace_to_cross_serial(float speed)
 
 	while (1)
 	{
-		get_path_serial(value);
+		get_T_eight_serial(value);
 		if (((value[1 - 1] && value[2 - 1]) || (value[8 - 1] && value[7 - 1])) && (value[4 - 1] || value[5 - 1])) // get_T(1)&&get_T(8))
 		{
 			HAL_Delay(10);
-			get_path_serial(value);
+			get_T_eight_serial(value);
 			if (((value[1 - 1] && value[2 - 1]) || (value[8 - 1] && value[7 - 1])) && (value[4 - 1] || value[5 - 1]))
 			{ // 遇到十字路口返回
 				break;

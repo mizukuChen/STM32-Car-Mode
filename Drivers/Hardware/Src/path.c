@@ -1,7 +1,7 @@
 // 检测轨迹模组(并行)
 
 #include <main.h>
-#include <Mode_path.h>
+#include <path.h>
 
 #define ALTERA1 0.5
 #define ALTERA2 1.2

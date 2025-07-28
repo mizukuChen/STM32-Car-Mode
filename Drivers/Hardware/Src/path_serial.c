@@ -1,7 +1,7 @@
 // 检测轨迹模组(串行)
 
 #include <main.h>
-#include <Mode_path_serial.h>
+#include <path_serial.h>
 
 #define ALTERA1 0.5
 #define ALTERA2 1.2
@@ -11,7 +11,7 @@
 #define INC_ALTERA3 1.0
 #define INC_ALTERA4 1.5
 
-void get_path_serial(uint8_t value[])
+void get_T_eight_serial(uint8_t value[])
 {
     for (uint8_t i = 0; i < 8; i++)
     {
@@ -22,13 +22,6 @@ void get_path_serial(uint8_t value[])
         Delay_Us(5);
     }
 } // 并口的刷新速率为1.5kHZ，即1s内最多读取1500次
-
-uint8_t get_T_serial(uint8_t flag)
-{
-    uint8_t value[8];
-    get_path_serial(value);
-    return value[flag - 1];
-}
 
 uint8_t get_T_ALL_serial(uint8_t value[])
 {
