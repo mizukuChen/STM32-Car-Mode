@@ -3,8 +3,8 @@
  * Auto generated Run-Time-Environment Configuration File
  *      *** Do not modify ! ***
  *
- * Project: '2021F' 
- * Target:  '2021F' 
+ * Project: 'model' 
+ * Target:  'model' 
  */
 
 #ifndef RTE_COMPONENTS_H
